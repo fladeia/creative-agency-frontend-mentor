@@ -9,8 +9,20 @@ export const Container = styled.div`
     padding-inline-start: 3rem;
   }
 
-  @media (max-width: 1024px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
     grid-template-columns: 35% 65%;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+      justify-self: flex-end;
+      padding: 2rem;
+    }
   }
 `
 
@@ -32,7 +44,7 @@ export const Navbar = styled.nav`
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    inset: 15% 5% 50% 30%;
+    inset: 10% 5% 60% 30%;
     background-color: var(--secondary500);
     color: var(--primary10);
 
