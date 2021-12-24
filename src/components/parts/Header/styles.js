@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   img {
     align-self: center;
-    padding-inline-start: 3rem;
+    padding-inline-start: 2rem;
   }
 
   .hamburger-menu {
@@ -42,9 +42,10 @@ export const Navbar = styled.nav`
   }
 
   @media (max-width: 768px) {
+    display: ${props => (props.displayMobileMenu ? 'flex' : 'none')};
     flex-direction: column;
     position: fixed;
-    inset: 10% 5% 60% 30%;
+    inset: 5rem 2rem 60% 30%;
     background-color: var(--secondary500);
     color: var(--primary10);
 
