@@ -4,14 +4,15 @@
 
 .hero {
   height: 800px;
-  display: grid;
+  display: flex;
   background: url('../../assets/desktop/image-hero.jpg') var(--primary10)
     no-repeat right;
   padding-inline-start: 8rem;
+  transition: background 0.3s;
 }
 
 .hero-info {
-  width: 45%;
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +22,7 @@
 
 h1 {
   font-size: 4rem;
+  transition: font-size 0.5s;
 }
 
 p {
@@ -35,13 +37,30 @@ p {
       no-repeat right;
     padding-inline-start: 4rem;
   }
+
+  h1 {
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    height: 606px;
     background: url('../../assets/mobile/image-hero.jpg') var(--primary10)
       no-repeat;
-    background-size: contain;
+    /* background-size: contain; */
+    background-position: center top;
+    justify-content: center;
+    align-items: flex-end;
+    padding: initial;
+  }
+
+  .hero-info {
+    width: 90%;
+    height: 60%;
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
   }
 }

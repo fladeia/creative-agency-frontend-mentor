@@ -1,24 +1,22 @@
 .header {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .logo {
   align-self: center;
   padding-inline-start: 8rem;
-}
-
-.hamburger-menu {
-  display: none;
+  transition: padding-inline 0.5s;
 }
 
 .navbar {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  justify-content: flex-end;
   padding: 3rem 8rem;
   background-color: var(--primary500);
+  transition: padding 0.5s;
 }
 
 ul {
@@ -28,10 +26,13 @@ ul {
   font-size: 1rem;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .navbar {
-    width: 66%;
-    padding: 3rem 4rem;
+    padding: 4rem 2rem;
   }
 
   .logo {
@@ -52,7 +53,6 @@ ul {
   }
 
   .navbar {
-    display: flex;
     flex-direction: column;
     position: fixed;
     inset: 4rem 2rem 55% 30%;
