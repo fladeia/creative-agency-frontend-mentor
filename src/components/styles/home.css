@@ -30,7 +30,64 @@ p {
   line-height: 1.5rem;
 }
 
+.sections {
+  display: grid;
+  grid-template-columns: 38% 12% 50%;
+  grid-template-rows: 784px 200px 800px 513px 215px;
+  /* grid-template-areas:
+    'one one two'
+    'one one two'
+    'three three three'
+    'four four six'
+    'five five six'; */
+}
+
+.section1 {
+  /* grid-area: one; */
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  background-color: red;
+}
+.section2 {
+  /* grid-area: two; */
+  grid-column: 3 / 4;
+  background-color: #000;
+}
+.section3 {
+  /* grid-area: three; */
+  grid-column: 1 / 2;
+  background-color: #fff;
+}
+.section4 {
+  /* grid-area: four; */
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  background-color: rgb(158, 1, 1);
+}
+.section5 {
+  /* grid-area: five; */
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+  background-color: #000;
+  z-index: 10;
+}
+.section6 {
+  /* grid-area: six; */
+  grid-column: 2 / 4;
+  grid-row: 4 / 6;
+  background-color: rgb(94, 55, 55);
+}
+
 @media (max-width: 1024px) {
+  .sections {
+    grid-template-areas:
+      'one two'
+      'one two'
+      'three three'
+      'four five'
+      'six six';
+  }
+
   .hero {
     height: 606px;
     background: url('../../assets/tablet/image-hero.jpg') var(--primary10)

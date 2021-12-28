@@ -4,6 +4,10 @@ import { BtnLearnMore } from '../Buttons/BtnLearnMore'
 import { ContactPrimary } from '../Buttons/BtnContact'
 import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
+import strategic from  '../../assets/desktop/image-strategic.jpg'
+import slide1 from '../../assets/desktop/image-slide-1.jpg'
+import slide2 from '../../assets/desktop/image-slide-2.jpg'
+import slide3 from '../../assets/desktop/image-slide-3.jpg'
 import '../styles/home.css'
 import '../styles/header.css'
 
@@ -48,7 +52,20 @@ export const Home = () => {
           <BtnLearnMore />
         </div>
       </div>
-      {/* ---------------------------------------------------section1 */}
+      {/* ---------------------------------------------------section */}
+      <div className='sections'>
+        <div className='section1'>
+          <img src={strategic} alt='illustration 1'></img>
+        </div>
+        <div className='section2'>2</div>
+        <div className='section3'>3</div>
+        <div className='section4'>4</div>
+        <div className='section5'>5</div>
+        <div className='section6'>
+          <img src={slide1} alt='illustration 1'></img>
+        </div>
+      </div>
+
       <Outlet />
     </div>
   )
