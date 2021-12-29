@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { BtnLearnMore } from '../Buttons/BtnLearnMore'
 import { ContactPrimary } from '../Buttons/BtnContact'
+import { ContactSecondary } from  '../Buttons/BtnContact'
+import { ContactTertiary } from  '../Buttons/BtnContact'
 import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
 import strategic from  '../../assets/desktop/image-strategic.jpg'
@@ -54,16 +56,43 @@ export const Home = () => {
           <BtnLearnMore />
         </div>
       </div>
-      {/* ---------------------------------------------------section */}
+      {/* ---------------------------------------------------sections */}
       <div className='sections'>
         <div className='section1'>
           <img src={strategic} alt='illustration 1' className='illustration1'></img>
         </div>
         <div className='section2'>
           <img src={waveRed} alt='red wave' className='red-wave'></img>
+          <div className='section2-info'>
+            <h2><span>Design </span>is strategic.</h2>
+            <p>"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm belivies that success lies in creative collaboration with our clients."</p>
+            <ContactTertiary />
+          </div>
         </div>
-        <div className='section3'>3</div>
-        <div className='section4'>4</div>
+        <div className='section3'>
+          <div className='section3-info'>
+            <h2>Our approach for creating a winning brand</h2>
+          </div>
+        </div>
+        <div className='section4'>
+          <div className='section4-info'>
+            <div className='info'>
+              <span>01</span>
+              <h3>Brand Strategy</h3>
+              <p>Brand Strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+            </div>
+            <div className='info'>
+              <span>02</span>
+              <h3>Brand Design</h3>
+              <p>Keep the brand design unique and meaningful helps in communicating the brand's timeless value effectively.</p>
+            </div>
+            <div className='info'>
+              <span>03</span>
+              <h3>Web Design</h3>
+              <p>A beutiful crafted website is the best tool for brand awareness, and ultimately results in increased revenues.</p>
+            </div>
+          </div>
+        </div>
         <div className='section5'>
           <img src={waveWhite} alt='white wave' className='white-wave'></img>
         </div>

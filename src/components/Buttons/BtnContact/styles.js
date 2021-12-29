@@ -5,7 +5,7 @@ export const Button = styled.button`
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  background-color: var(--secondary500);
+  background-color: var(--secondary900);
   border: none;
 
   color: ${props =>
@@ -14,6 +14,7 @@ export const Button = styled.button`
   span {
     border-bottom: ${props =>
       props.tertiary ? '2px solid var(--primary500)' : ''};
+    padding-bottom: 6px;
   }
 
   @media (max-width: 768px) {
