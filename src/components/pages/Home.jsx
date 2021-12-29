@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { BtnLearnMore } from '../Buttons/BtnLearnMore'
 import { ContactPrimary } from '../Buttons/BtnContact'
@@ -8,8 +8,8 @@ import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
 import strategic from  '../../assets/desktop/image-strategic.jpg'
 import slide1 from '../../assets/desktop/image-slide-1.jpg'
-// import slide2 from '../../assets/desktop/image-slide-2.jpg'
-// import slide3 from '../../assets/desktop/image-slide-3.jpg'
+import slide2 from '../../assets/desktop/image-slide-2.jpg'
+import slide3 from '../../assets/desktop/image-slide-3.jpg'
 import waveWhite from '../../assets/desktop/bg-pattern-wavy-white.svg'
 import waveRed from '../../assets/desktop/bg-pattern-wave-red.svg'
 import previousArrow from  '../../assets/desktop/icon-arrow-previous.svg'
@@ -18,7 +18,10 @@ import '../styles/home.css'
 import '../styles/header.css'
 
 export const Home = () => {
+  const slides = [slide1, slide2, slide3]
   let [displayMobileMenu, setDisplayMobileMenu] = useState("navbar navbar-close")
+  let [ carousel, setCarousel ] = useState(slides[0])
+  let [ carouselItems, setCarouselItems] = useState(0)
   
   function handleClick () {
     if(displayMobileMenu === "navbar navbar-close") {
@@ -28,7 +31,20 @@ export const Home = () => {
     }
   }
 
-  console.log(displayMobileMenu);
+  function handleCarouselNext () {
+    if(carouselItems < slides.length - 1) {
+      setCarouselItems(carouselItems = carouselItems + 1)
+      setCarousel(slides[carouselItems])
+    }
+  }
+  
+  function handleCarouselPrevious () {
+    if(carouselItems > 0) {
+      setCarouselItems(carouselItems = carouselItems - 1)
+      setCarousel(slides[carouselItems])
+    }
+  }
+
   return (
     <div className="container">
       {/* ---------------------------------------------------header */}
@@ -100,13 +116,13 @@ export const Home = () => {
           <div className='section5-info'>
             <h2>Brand naming & guidelines</h2>
             <div className='section5-arrows'>
-              <img src={previousArrow} al="previews arrow"></img>
-              <img src={forwardArrow} al="forward arrow"></img>
+              <img src={previousArrow} al="previews arrow" onClick={handleCarouselPrevious}></img>
+              <img src={forwardArrow} al="forward arrow" onClick={handleCarouselNext}></img>
             </div>
           </div>
         </div>
         <div className='section6'>
-          <img src={slide1} alt='illustration 1' className='illustration2'></img>
+          <img src={carousel} alt='illustration 1' className='illustration2'></img>
         </div>
       </div>
     {/* ---------------------------------------------------footer */}
