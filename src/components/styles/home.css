@@ -13,13 +13,22 @@
 
 .hero-info,
 .section2-info,
-.section4-info {
+.section4-info,
+.section5-info {
   width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
+}
+
+.section2-info {
+  width: 380px;
+}
+
+.section3-info {
+  margin: 8rem -120px 0px 240px;
 }
 
 .section4-info {
@@ -29,14 +38,6 @@
 
 .section4-info .info {
   position: relative;
-}
-
-.section2-info {
-  width: 380px;
-}
-
-.section3-info {
-  margin: 8rem -120px 0px 240px;
 }
 
 .section2-info span {
@@ -71,6 +72,15 @@
   position: relative;
 }
 
+.section5-info {
+  color: var(--primary10);
+}
+
+.section5-arrows {
+  display: flex;
+  gap: 1rem;
+}
+
 h1 {
   font-size: 4rem;
   transition: font-size 0.5s;
@@ -89,7 +99,7 @@ p {
 .sections {
   display: grid;
   grid-template-columns: 38% 12% 50%;
-  grid-template-rows: 784px 200px 800px 513px 215px;
+  grid-template-rows: 784px 200px 800px 513px 284px;
   /* grid-template-areas:
     'one one two'
     'one one two'
@@ -133,6 +143,8 @@ p {
   background-color: #000;
   z-index: 10;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .section6 {
   /* grid-area: six; */
@@ -160,6 +172,23 @@ p {
   right: -66px;
   top: 165px;
   z-index: 100;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 16rem;
+}
+
+.footer .red-wave {
+  position: absolute;
+  left: -66px;
+}
+
+.footer h2 {
+  width: 30%;
+  font-size: 2.5rem;
 }
 
 @media (max-width: 1024px) {

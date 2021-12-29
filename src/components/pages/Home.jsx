@@ -12,6 +12,8 @@ import slide1 from '../../assets/desktop/image-slide-1.jpg'
 // import slide3 from '../../assets/desktop/image-slide-3.jpg'
 import waveWhite from '../../assets/desktop/bg-pattern-wavy-white.svg'
 import waveRed from '../../assets/desktop/bg-pattern-wave-red.svg'
+import previousArrow from  '../../assets/desktop/icon-arrow-previous.svg'
+import forwardArrow from  '../../assets/desktop/icon-arrow-next.svg'
 import '../styles/home.css'
 import '../styles/header.css'
 
@@ -95,11 +97,24 @@ export const Home = () => {
         </div>
         <div className='section5'>
           <img src={waveWhite} alt='white wave' className='white-wave'></img>
+          <div className='section5-info'>
+            <h2>Brand naming & guidelines</h2>
+            <div className='section5-arrows'>
+              <img src={previousArrow} al="previews arrow"></img>
+              <img src={forwardArrow} al="forward arrow"></img>
+            </div>
+          </div>
         </div>
         <div className='section6'>
           <img src={slide1} alt='illustration 1' className='illustration2'></img>
         </div>
       </div>
+    {/* ---------------------------------------------------footer */}
+      <footer className='footer'>
+        <img src={waveRed} alt='red wave' className='red-wave'></img>
+        <h2>Let's build something great together.</h2>
+        <BtnLearnMore />
+      </footer>
 
       <Outlet />
     </div>
