@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { BtnLearnMore } from '../Buttons/BtnLearnMore'
 import { ContactPrimary } from '../Buttons/BtnContact'
-import { ContactSecondary } from  '../Buttons/BtnContact'
+// import { ContactSecondary } from  '../Buttons/BtnContact'
 import { ContactTertiary } from  '../Buttons/BtnContact'
 import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
-import strategic from  '../../assets/desktop/image-strategic.jpg'
 import slide1 from '../../assets/desktop/image-slide-1.jpg'
 import slide2 from '../../assets/desktop/image-slide-2.jpg'
 import slide3 from '../../assets/desktop/image-slide-3.jpg'
@@ -77,7 +76,7 @@ export const Home = () => {
       {/* ---------------------------------------------------sections */}
       <div className='sections'>
         <div className='section1'>
-          <img src={strategic} alt='illustration 1' className='illustration1'></img>
+          <div className='section1-bg'></div>
         </div>
         <div className='section2'>
           <img src={waveRed} alt='red wave' className='red-wave'></img>
