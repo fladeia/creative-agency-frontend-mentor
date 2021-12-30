@@ -127,8 +127,10 @@ export const Home = () => {
     {/* ---------------------------------------------------footer */}
       <footer className='footer'>
         <img src={waveRed} alt='red wave' className='red-wave'></img>
-        <h2>Let's build something great together.</h2>
-        <BtnLearnMore />
+        <div className='footer-content'>
+          <h2>Let's build something great together.</h2>
+          <BtnLearnMore />
+        </div>
       </footer>
 
       <Outlet />

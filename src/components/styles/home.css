@@ -195,19 +195,27 @@ p {
 }
 
 .footer {
+  position: relative;
+}
+
+.footer-content {
+  width: 80%;
+  height: 300px;
+  margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  height: 16rem;
+  justify-content: space-between;
 }
 
 .footer .red-wave {
   position: absolute;
   left: -66px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .footer h2 {
-  width: 30%;
+  width: 45%;
   font-size: 2.5rem;
 }
 
@@ -292,6 +300,7 @@ p {
 
   .section4-info {
     width: 85%;
+    height: 650px;
   }
 
   .section4-info span {
@@ -307,12 +316,13 @@ p {
     display: none;
   }
 
-  .footer {
+  .footer-content {
     width: 90%;
     height: 300px;
     margin: auto;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-evenly;
   }
 
   .footer .red-wave {
