@@ -85,7 +85,7 @@ p {
 .section1 .section1-bg {
   height: 100%;
   background: url('../../assets/desktop/image-strategic.jpg') var(--primary10)
-    no-repeat right;
+    no-repeat center/cover;
 }
 
 .section2 {
@@ -99,6 +99,7 @@ p {
   position: absolute;
   left: -70px;
   top: 200px;
+  transition: top 0.8s;
 }
 
 .section2-info {
@@ -124,6 +125,7 @@ p {
 
 .section3-info {
   margin: 8rem -120px 0px 240px;
+  transition: margin 0.5s;
 }
 
 .section4 {
@@ -148,6 +150,7 @@ p {
   position: absolute;
   inset: -40px 0 0 -46px;
   opacity: 0.6;
+  transition: inset 0.5s;
 }
 
 .section4-info h3 {
@@ -177,13 +180,17 @@ p {
 }
 
 .section5-info {
-  width: 500px;
+  width: 400px;
   color: var(--primary10);
 }
 
 .section5-arrows {
   display: flex;
   gap: 1rem;
+}
+
+.section5-arrows:hover {
+  cursor: pointer;
 }
 
 .section6 {
@@ -219,6 +226,16 @@ p {
   font-size: 2.5rem;
 }
 
+@media (max-width: 1280px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .section3-info {
+    margin: 8rem 60px 0 2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero {
     height: 606px;
@@ -229,11 +246,15 @@ p {
 
   .section1 .section1-bg {
     background: url('../../assets/tablet/image-strategic.jpg') var(--primary10)
-      no-repeat right;
+      no-repeat center/cover;
   }
 
   h1 {
     font-size: 3.5rem;
+  }
+
+  .section2 .red-wave {
+    top: 126px;
   }
 }
 

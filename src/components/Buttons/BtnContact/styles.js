@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-  padding: 1.3rem 4rem;
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   font-size: 1rem;
   background-color: var(--secondary900);
   border: none;
+
+  padding: ${props => (props.tertiary ? '1.3rem 0' : '1.3rem 4rem')};
 
   color: ${props =>
     props.tertiary ? 'var(--primary500)' : 'var(--primary10)'};
@@ -17,9 +18,13 @@ export const Button = styled.button`
     padding-bottom: 6px;
   }
 
+  :hover {
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
     background-color: ${props =>
-      props.mobile ? 'var(--primary500)' : 'var(--secondary500)'};
+      props.mobile ? 'var(--primary500)' : 'var(--secondary900)'};
   }
 `
 

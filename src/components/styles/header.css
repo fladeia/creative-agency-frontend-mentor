@@ -55,7 +55,7 @@ ul {
   .navbar {
     flex-direction: column;
     position: fixed;
-    inset: 4rem 2rem 55% 30%;
+    inset: 4rem 2rem 48% 30%;
     background-color: var(--secondary500);
     color: var(--primary10);
   }

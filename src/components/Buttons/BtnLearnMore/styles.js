@@ -8,4 +8,8 @@ export const Button = styled.button`
   background-color: var(--primary500);
   color: var(--primary10);
   border: none;
+
+  :hover {
+    cursor: pointer;
+  }
 `
