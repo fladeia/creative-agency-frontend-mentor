@@ -132,7 +132,6 @@ export const Home = () => {
           <BtnLearnMore />
         </div>
       </footer>
-
       <Outlet />
     </div>
   )
