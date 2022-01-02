@@ -31,3 +31,8 @@ export const Button = styled.button`
 export const ButtonSecondary = styled(Button)`
   background-color: var(--primary500);
 `
+
+export const ButtonSubmit = styled(Button)`
+  padding: 1.3rem 4rem;
+  background-color: var(--primary500);
+`

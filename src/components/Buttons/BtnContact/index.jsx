@@ -24,3 +24,9 @@ export const ContactTertiary = () => {
     </Link>
   )
 }
+
+export const SubmitPrimary = () => {
+  return (
+      <C.ButtonSubmit type='submit'><span>Enviar</span></C.ButtonSubmit>
+  )
+}

@@ -198,7 +198,7 @@ p {
 }
 
 .section6 .illustration2 {
-  width: 100%;
+  max-width: 100%;
 }
 
 .footer {
@@ -286,7 +286,7 @@ p {
   .section1 .section1-bg {
     height: 200px;
     background: url('../../assets/mobile/image-strategic.jpg') var(--primary10)
-      no-repeat;
+      no-repeat center;
   }
 
   .section2 .red-wave {
