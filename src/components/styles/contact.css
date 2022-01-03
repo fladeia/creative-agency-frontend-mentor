@@ -8,7 +8,7 @@
 
 .form-content {
   position: absolute;
-  inset: 20% 30%;
+  inset: 15% 30%;
   background-color: var(--secondary500);
 }
 
@@ -42,7 +42,7 @@ textarea {
 
 @media (max-width: 1024px) {
   .form-content {
-    inset: 20%;
+    inset: 15% 20%;
   }
 }
 

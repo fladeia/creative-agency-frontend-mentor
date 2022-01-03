@@ -195,10 +195,34 @@ p {
 
 .section6 {
   background-color: #fff;
+  position: relative;
 }
 
-.section6 .illustration2 {
-  max-width: 100%;
+.section6 .slides-info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.section6 .slides-info .slides-illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section6 .slides-info .slides-text {
+  position: absolute;
+  bottom: 82px;
+  right: 164px;
+  color: var(--primary10);
+}
+
+.section6 .slides-info .slides-text h4 {
+  font-size: 1.4rem;
+}
+
+.section6 .slides-info .slides-text p {
+  text-align: end;
 }
 
 .footer {
@@ -335,6 +359,10 @@ p {
 
   .section5 .white-wave {
     display: none;
+  }
+
+  .section6 .slides-info .slides-text {
+    right: 36px;
   }
 
   .footer-content {

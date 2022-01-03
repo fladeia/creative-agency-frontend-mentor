@@ -18,9 +18,26 @@ import '../styles/header.css'
 
 export const Home = () => {
   const slides = [slide1, slide2, slide3]
+  const slidesInfo = [
+    {
+      info1: "Lear Product Roadmap",
+      info2: "2019 Project"
+    },
+    {
+      info1: "New Magestic Hotel",
+      info2: "2018 Project"
+    },
+    {
+      info1: "Crypto Dashboard",
+      info2: "2016 Project"
+    }
+  ]
+
   let [displayMobileMenu, setDisplayMobileMenu] = useState("navbar navbar-close")
-  let [ carousel, setCarousel ] = useState(slides[0])
-  let [ carouselItems, setCarouselItems] = useState(0)
+  let [ carousel, setCarousel ] = useState(slides[0]) //photo
+  let [ carouselItems, setCarouselItems] = useState(0) //index
+  let [ carouselInfo1, setCarouselInfo1] = useState(slidesInfo[0].info1)
+  let [ carouselInfo2, setCarouselInfo2] = useState(slidesInfo[0].info2)
   
   function handleClick () {
     if(displayMobileMenu === "navbar navbar-close") {
@@ -34,6 +51,8 @@ export const Home = () => {
     if(carouselItems < slides.length - 1) {
       setCarouselItems(carouselItems = carouselItems + 1)
       setCarousel(slides[carouselItems])
+      setCarouselInfo1(slidesInfo[carouselItems].info1)
+      setCarouselInfo2(slidesInfo[carouselItems].info2)
     }
   }
   
@@ -41,6 +60,8 @@ export const Home = () => {
     if(carouselItems > 0) {
       setCarouselItems(carouselItems = carouselItems - 1)
       setCarousel(slides[carouselItems])
+      setCarouselInfo1(slidesInfo[carouselItems].info1)
+      setCarouselInfo2(slidesInfo[carouselItems].info2)
     }
   }
 
@@ -121,7 +142,13 @@ export const Home = () => {
           </div>
         </div>
         <div className='section6'>
-          <img src={carousel} alt='illustration 1' className='illustration2'></img>
+          <div className='slides-info'>
+            <img src={carousel} alt='slides' className='slides-illustration'></img>
+            <div className='slides-text'>
+              <h4>{carouselInfo1}</h4>
+              <p>{carouselInfo2}</p>
+            </div>
+          </div>
         </div>
       </div>
     {/* ---------------------------------------------------footer */}

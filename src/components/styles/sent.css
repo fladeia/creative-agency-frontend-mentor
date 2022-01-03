@@ -17,7 +17,9 @@
 }
 
 .sent-message h2 {
+  width: 85%;
   font-size: 2rem;
+  text-align: center;
 }
 
 .sent-message p {

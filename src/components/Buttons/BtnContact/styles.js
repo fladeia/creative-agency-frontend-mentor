@@ -33,6 +33,11 @@ export const ButtonSecondary = styled(Button)`
 `
 
 export const ButtonSubmit = styled(Button)`
+  width: 50%;
   padding: 1.3rem 4rem;
   background-color: var(--primary500);
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
 `
