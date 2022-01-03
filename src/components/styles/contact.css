@@ -1,9 +1,8 @@
 .contact-content {
-  /* width: 100px;
-  height: 100px; */
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: hsla(240, 14%, 11%, 0.6);
+  z-index: 999;
 }
 
 .form-content {

@@ -1,7 +1,8 @@
 .sent-content {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: hsla(240, 14%, 11%, 0.6);
+  z-index: 999;
 }
 
 .sent-message {

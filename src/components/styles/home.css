@@ -103,7 +103,8 @@ p {
 }
 
 .section2-info {
-  width: 380px;
+  width: 400px;
+  padding: max(10px, 5px);
 }
 
 .section2-info span {

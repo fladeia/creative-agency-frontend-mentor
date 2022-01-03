@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { BtnLearnMore } from '../Buttons/BtnLearnMore'
 import { ContactPrimary } from '../Buttons/BtnContact'
-// import { ContactSecondary } from  '../Buttons/BtnContact'
+import { ContactSecondary } from  '../Buttons/BtnContact'
 import { ContactTertiary } from  '../Buttons/BtnContact'
 import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
@@ -156,7 +156,7 @@ export const Home = () => {
         <img src={waveRed} alt='red wave' className='red-wave'></img>
         <div className='footer-content'>
           <h2>Let's build something great together.</h2>
-          <BtnLearnMore />
+          <ContactSecondary />
         </div>
       </footer>
       <Outlet />
