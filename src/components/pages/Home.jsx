@@ -81,7 +81,7 @@ export const Home = () => {
             <li>Serviços</li>
             <li>Projetos</li>
           </ul>
-          <ContactPrimary />
+          <ContactPrimary activeBtn={handleClick}/>
         </nav>
       </header>
       {/* ---------------------------------------------------hero */}

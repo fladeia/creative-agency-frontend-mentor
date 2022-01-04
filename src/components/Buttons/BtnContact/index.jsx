@@ -1,10 +1,10 @@
 import * as C from './styles'
 import { Link } from 'react-router-dom'
 
-export const ContactPrimary = ({secondary}) => {
+export const ContactPrimary = ({activeBtn}) => {
   return (
       <Link to="contact" >
-        <C.Button mobile>Contato</C.Button>
+        <C.Button mobile onClick={activeBtn}>Contato</C.Button>
       </Link>
   )
 }
