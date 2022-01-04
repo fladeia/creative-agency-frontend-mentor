@@ -38,6 +38,7 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+  font-weight: 800;
   transition: font-size 0.5s;
 }
 
@@ -50,7 +51,7 @@ p {
   .sections {
     display: grid;
     grid-template-columns: 38% 12% 50%;
-    grid-template-rows: 784px 200px 800px 513px 284px;
+    grid-template-rows: 784px 0 800px 513px 284px;
   }
 
   .section1 {
@@ -79,6 +80,12 @@ p {
   .section6 {
     grid-column: 2 / 4;
     grid-row: 4 / 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sections {
+    grid-template-rows: 784px 200px 800px 513px 284px;
   }
 }
 
@@ -125,7 +132,7 @@ p {
 }
 
 .section3-info {
-  margin: 8rem -120px 0px 240px;
+  margin: 12rem -172px 0px 168px;
   transition: margin 0.5s;
 }
 
@@ -137,7 +144,7 @@ p {
 
 .section4-info {
   width: 400px;
-  gap: 5rem;
+  gap: 6rem;
 }
 
 .section4-info .info {
@@ -182,6 +189,7 @@ p {
 
 .section5-info {
   width: 400px;
+  padding: max(10px, 5px);
   color: var(--primary10);
 }
 
@@ -212,9 +220,17 @@ p {
 }
 
 .section6 .slides-info .slides-text {
+  width: 100%;
+  height: 160px;
+  text-align: end;
+  padding: 2rem 6rem;
+  background-image: linear-gradient(
+    hsla(240, 14%, 11%, 0.01),
+    hsl(240, 14%, 11%)
+  );
   position: absolute;
-  bottom: 82px;
-  right: 164px;
+  bottom: 0;
+  right: 0;
   color: var(--primary10);
 }
 
@@ -257,7 +273,9 @@ p {
   }
 
   .section3-info {
-    margin: 8rem 60px 0 2rem;
+    margin: 0;
+    padding-block: 10rem;
+    padding-inline: max(2rem, 1rem);
   }
 }
 
@@ -278,8 +296,21 @@ p {
     font-size: 3.5rem;
   }
 
+  p {
+    font-size: 0.9rem;
+  }
+
   .section2 .red-wave {
     top: 126px;
+  }
+
+  .section4 {
+    align-items: center;
+  }
+
+  .section4-info {
+    width: 80%;
+    height: 650px;
   }
 }
 
@@ -344,11 +375,6 @@ p {
     color: var(--primary10);
   }
 
-  .section4-info {
-    width: 85%;
-    height: 650px;
-  }
-
   .section4-info span {
     height: 650px;
     inset: -36px 0 0 -16px;
@@ -363,7 +389,8 @@ p {
   }
 
   .section6 .slides-info .slides-text {
-    right: 36px;
+    height: 120px;
+    padding: 2rem;
   }
 
   .footer-content {
