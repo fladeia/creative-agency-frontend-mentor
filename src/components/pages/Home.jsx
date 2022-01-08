@@ -20,16 +20,19 @@ export const Home = () => {
   const slides = [slide1, slide2, slide3]
   const slidesInfo = [
     {
-      info1: "Lear Product Roadmap",
-      info2: "2019 Project"
+      info1: "Loopstudios landing page",
+      info2: "Landing page",
+      url: "https://suspicious-hypatia-ebc4ee.netlify.app/"
     },
     {
-      info1: "New Magestic Hotel",
-      info2: "2018 Project"
+      info1: "Sunnyside agency landing page",
+      info2: "Landing page",
+      url: "https://sad-bassi-eaf8bc.netlify.app"
     },
     {
-      info1: "Crypto Dashboard",
-      info2: "2016 Project"
+      info1: "Space tourism",
+      info2: "multi-page website",
+      url: "https://gallant-spence.netlify.app/"
     }
   ]
 
@@ -38,6 +41,7 @@ export const Home = () => {
   let [ carouselItems, setCarouselItems] = useState(0) //index
   let [ carouselInfo1, setCarouselInfo1] = useState(slidesInfo[0].info1)
   let [ carouselInfo2, setCarouselInfo2] = useState(slidesInfo[0].info2)
+  let [ carouselUrl, setCarouselUrl] = useState(slidesInfo[0].url)
   
   function handleClick () {
     if(displayMobileMenu === "navbar navbar-close") {
@@ -53,6 +57,7 @@ export const Home = () => {
       setCarousel(slides[carouselItems])
       setCarouselInfo1(slidesInfo[carouselItems].info1)
       setCarouselInfo2(slidesInfo[carouselItems].info2)
+      setCarouselUrl(slidesInfo[carouselItems].url)
     }
   }
   
@@ -62,6 +67,7 @@ export const Home = () => {
       setCarousel(slides[carouselItems])
       setCarouselInfo1(slidesInfo[carouselItems].info1)
       setCarouselInfo2(slidesInfo[carouselItems].info2)
+      setCarouselUrl(slidesInfo[carouselItems].url)
     }
   }
 
@@ -79,7 +85,7 @@ export const Home = () => {
           <ul>
             <li><a href='#about'>Sobre</a></li>
             <li><a href='#services'>Serviços</a></li>
-            <li><a href='#project'>Projetos</a></li>
+            <li><a href='#project'>Portfolio</a></li>
           </ul>
           <ContactPrimary activeBtn={handleClick}/>
         </nav>
@@ -136,7 +142,7 @@ export const Home = () => {
         <div className='section5' id='project'>
           <img src={waveWhite} alt='white wave' className='white-wave'></img>
           <div className='section5-info'>
-            <h2>Brand naming & guidelines</h2>
+            <h2>Portfolio</h2>
             <div className='section5-arrows'>
               <img src={previousArrow} alt="previews arrow" className='preview-arrow' onClick={handleCarouselPrevious}></img>
               <img src={forwardArrow} alt="forward arrow" className='forward-arrow' onClick={handleCarouselNext}></img>
@@ -145,7 +151,9 @@ export const Home = () => {
         </div>
         <div className='section6'>
           <div className='slides-info'>
-            <img src={carousel} alt='slides' className='slides-illustration'></img>
+            <a href={carouselUrl} target='_blank'>
+              <img src={carousel} alt='slides' className='slides-illustration'></img>
+            </a>
             <div className='slides-text'>
               <h4>{carouselInfo1}</h4>
               <p>{carouselInfo2}</p>
