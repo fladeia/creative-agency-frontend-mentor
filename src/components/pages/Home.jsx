@@ -1,4 +1,4 @@
-import { useState } from 'react'
+ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { BtnLearnMore } from '../Buttons/BtnLearnMore'
 import { ContactPrimary } from '../Buttons/BtnContact'
@@ -77,9 +77,9 @@ export const Home = () => {
         </div>
         <nav className={displayMobileMenu}>
           <ul>
-            <li>Sobre</li>
-            <li>Serviços</li>
-            <li>Projetos</li>
+            <li><a href='#about'>Sobre</a></li>
+            <li><a href='#services'>Serviços</a></li>
+            <li><a href='#project'>Projetos</a></li>
           </ul>
           <ContactPrimary activeBtn={handleClick}/>
         </nav>
@@ -96,7 +96,7 @@ export const Home = () => {
       </div>
       {/* ---------------------------------------------------sections */}
       <div className='sections'>
-        <div className='section1'>
+        <div className='section1' id='about'>
           <div className='section1-bg'></div>
         </div>
         <div className='section2'>
@@ -112,7 +112,7 @@ export const Home = () => {
             <h2>Our approach for creating a winning brand</h2>
           </div>
         </div>
-        <div className='section4'>
+        <div className='section4' id='services'>
           <div className='section4-info'>
             <div className='info'>
               <span>01</span>
@@ -131,7 +131,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className='section5'>
+        <div className='section5' id='project'>
           <img src={waveWhite} alt='white wave' className='white-wave'></img>
           <div className='section5-info'>
             <h2>Brand naming & guidelines</h2>

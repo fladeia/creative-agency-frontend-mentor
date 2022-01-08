@@ -33,6 +33,11 @@
   width: 480px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary900);
+}
+
 h1 {
   font-size: 4rem;
   transition: font-size 0.5s;
