@@ -4,7 +4,7 @@ import { BtnLearnMore } from '../Buttons/BtnLearnMore'
 import { ContactPrimary } from '../Buttons/BtnContact'
 import { ContactSecondary } from  '../Buttons/BtnContact'
 import { ContactTertiary } from  '../Buttons/BtnContact'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/desktop/logo.png'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
 import slide1 from '../../assets/desktop/image-slide-1.jpg'
 import slide2 from '../../assets/desktop/image-slide-2.jpg'
@@ -86,12 +86,14 @@ export const Home = () => {
       </header>
       {/* ---------------------------------------------------hero */}
       <div className='hero'>
-        <div className="hero-info">
-          <h1>Branding & website design agency</h1>
-          <p>
-            We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.
-          </p>
-          <BtnLearnMore />
+        <div className='hero-bg-layer'>
+          <div className="hero-info">
+            <h1>Branding & website design agency</h1>
+            <p>
+              We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.
+            </p>
+            <BtnLearnMore />
+          </div>
         </div>
       </div>
       {/* ---------------------------------------------------sections */}

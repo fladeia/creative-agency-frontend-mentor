@@ -1,4 +1,13 @@
 :root {
+  --primary10: #e1e1e1;
+  --primary300: #ffeb3b;
+  --primary500: #fbc02d;
+
+  --secondary400: hsl(240, 12%, 30%);
+  --secondary500: hsl(240, 14%, 11%);
+  --secondary900: hsl(0, 0%, 0%);
+}
+/* :root {
   --primary10: hsl(0, 0%, 100%);
   --primary300: hsl(0, 100%, 79%);
   --primary500: hsl(0, 93%, 64%);
@@ -6,7 +15,7 @@
   --secondary400: hsl(240, 12%, 30%);
   --secondary500: hsl(240, 14%, 11%);
   --secondary900: hsl(0, 0%, 0%);
-}
+} */
 
 * {
   margin: 0;
