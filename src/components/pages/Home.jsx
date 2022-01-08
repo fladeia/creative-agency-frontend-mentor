@@ -136,8 +136,8 @@ export const Home = () => {
           <div className='section5-info'>
             <h2>Brand naming & guidelines</h2>
             <div className='section5-arrows'>
-              <img src={previousArrow} al="previews arrow" onClick={handleCarouselPrevious}></img>
-              <img src={forwardArrow} al="forward arrow" onClick={handleCarouselNext}></img>
+              <img src={previousArrow} alt="previews arrow" className='preview-arrow' onClick={handleCarouselPrevious}></img>
+              <img src={forwardArrow} alt="forward arrow" className='forward-arrow' onClick={handleCarouselNext}></img>
             </div>
           </div>
         </div>

@@ -201,12 +201,29 @@ p {
 }
 
 .section5-arrows {
+  width: 8rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
+  transition: width 0.5s;
 }
 
 .section5-arrows:hover {
   cursor: pointer;
+}
+
+.section5-arrows .preview-arrow,
+.forward-arrow {
+  width: 50px;
+}
+
+.section5-arrows .forward-arrow:hover {
+  width: 40px;
+}
+
+.section5-arrows .preview-arrow:hover {
+  width: 40px;
 }
 
 .section6 {
@@ -370,15 +387,16 @@ p {
 
   .section3 {
     height: 210px;
-    background-color: var(--primary500);
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--primary500);
   }
 
   .section3-info {
     width: 90%;
     margin: 0;
+    padding-block: 0;
     color: var(--primary10);
   }
 
