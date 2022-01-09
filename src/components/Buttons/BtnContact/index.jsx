@@ -33,6 +33,6 @@ export const SubmitPrimary = () => {
 
 export const BtnLearnMore = () => {
   return (
-    <C.ButtonMore>Mais Info</C.ButtonMore>
+    <C.ButtonMore>Saiba Mais</C.ButtonMore>
   )
 }

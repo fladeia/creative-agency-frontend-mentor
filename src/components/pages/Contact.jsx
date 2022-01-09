@@ -8,8 +8,8 @@ export const Contact = () => {
     <div className='contact-content'>
       <div className='form-content'>
         <Link to='/' className='contact-close'>X</Link>
-        <form action="https://formsubmit.co/ladeiadev@gmail.com" method="POST" className='form'>
-          <input type="hidden" name="_next" value="http://localhost:3000/sent"></input>
+        <form action="https://formsubmit.co/contato@ladeia.dev.br" method="POST" className='form'>
+          <input type="hidden" name="_next" value="https://ladeia.dev.br/sent"></input>
           <label>Nome</label>
           <input type='text' name='name' ></input>
           <label>Sobrenome</label>

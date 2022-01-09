@@ -88,7 +88,7 @@ export const Home = () => {
       {/* ---------------------------------------------------header */}
       <header className='header' >
         <div className='logo'>
-          <img src={logo} alt="Logo" ></img>
+          <img src={logo} alt="Logo LadeiaDev" ></img>
         </div>
         <div className='hamburger-menu'>
           <img src={Hamburger} alt="Hamburger menu"  onClick={handleClick} ></img>
@@ -108,7 +108,7 @@ export const Home = () => {
           <div className="hero-info">
             <h1>website <span>online</span> em até <span>24hr</span></h1>
             <p>Diponibilizo seu website em até 24hr para os modelos oferecidos. Se você preferir personalizar entre em contato.</p>
-            <BtnLearnMore />
+            <a href='#services'><BtnLearnMore /></a>
           </div>
         </div>
       </div>
