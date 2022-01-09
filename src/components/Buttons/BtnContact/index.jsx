@@ -27,6 +27,12 @@ export const ContactTertiary = () => {
 
 export const SubmitPrimary = () => {
   return (
-      <C.ButtonSubmit type='submit'><span>Enviar</span></C.ButtonSubmit>
+      <C.ButtonSubmit type='submit'>Enviar</C.ButtonSubmit>
+  )
+}
+
+export const BtnLearnMore = () => {
+  return (
+    <C.ButtonMore>Mais Info</C.ButtonMore>
   )
 }

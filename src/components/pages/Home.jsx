@@ -1,6 +1,6 @@
  import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { BtnLearnMore } from '../Buttons/BtnLearnMore'
+import { BtnLearnMore } from '../Buttons/BtnContact'
 import { ContactPrimary } from '../Buttons/BtnContact'
 import { ContactSecondary } from  '../Buttons/BtnContact'
 import { ContactTertiary } from  '../Buttons/BtnContact'
@@ -9,20 +9,22 @@ import Hamburger from '../../assets/mobile/icon-hamburger.svg'
 import slide1 from '../../assets/desktop/image-slide-1.jpg'
 import slide2 from '../../assets/desktop/image-slide-2.jpg'
 import slide3 from '../../assets/desktop/image-slide-3.jpg'
+import slide4 from '../../assets/desktop/image-slide-4.jpg'
+import slide5 from '../../assets/desktop/image-slide-5.jpg'
 import waveWhite from '../../assets/desktop/bg-pattern-wavy-white.svg'
-import waveRed from '../../assets/desktop/bg-pattern-wave-red.svg'
-import previousArrow from  '../../assets/desktop/icon-arrow-previous.svg'
-import forwardArrow from  '../../assets/desktop/icon-arrow-next.svg'
+import waveYellow from '../../assets/desktop/bg-pattern-wave-yellow.svg'
+import previousArrow from  '../../assets/desktop/icon-arrow-previous-secondary.svg'
+import forwardArrow from  '../../assets/desktop/icon-arrow-next-secondary.svg'
 import '../styles/home.css'
 import '../styles/header.css'
 
 export const Home = () => {
-  const slides = [slide1, slide2, slide3]
+  const slides = [slide1, slide2, slide3, slide4, slide5]
   const slidesInfo = [
     {
-      info1: "Loopstudios landing page",
-      info2: "Landing page",
-      url: "https://suspicious-hypatia-ebc4ee.netlify.app/"
+      info1: "URL shortening API landing page",
+      info2: "Landing page + API",
+      url: "https://brave-poincare-1450ec.netlify.app/"
     },
     {
       info1: "Sunnyside agency landing page",
@@ -33,12 +35,22 @@ export const Home = () => {
       info1: "Space tourism",
       info2: "multi-page website",
       url: "https://gallant-spence.netlify.app/"
+    },
+    {
+      info1: "Base Apparel coming soon page",
+      info2: "Landing page",
+      url: "https://jolly-bhaskara-4794a9.netlify.app/"
+    },
+    {
+      info1: "IP Address Tracker",
+      info2: "Landing page + API",
+      url: "https://pedantic-meninsky-61e802.netlify.app/"
     }
   ]
 
   let [displayMobileMenu, setDisplayMobileMenu] = useState("navbar navbar-close")
-  let [ carousel, setCarousel ] = useState(slides[0]) //photo
-  let [ carouselItems, setCarouselItems] = useState(0) //index
+  let [ carousel, setCarousel ] = useState(slides[0]) 
+  let [ carouselItems, setCarouselItems] = useState(0) 
   let [ carouselInfo1, setCarouselInfo1] = useState(slidesInfo[0].info1)
   let [ carouselInfo2, setCarouselInfo2] = useState(slidesInfo[0].info2)
   let [ carouselUrl, setCarouselUrl] = useState(slidesInfo[0].url)
@@ -94,10 +106,8 @@ export const Home = () => {
       <div className='hero'>
         <div className='hero-bg-layer'>
           <div className="hero-info">
-            <h1>Branding & website design agency</h1>
-            <p>
-              We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.
-            </p>
+            <h1>website <span>online</span> em até <span>24hr</span></h1>
+            <p>Diponibilizo seu website em até 24hr para os modelos oferecidos. Se você preferir personalizar entre em contato.</p>
             <BtnLearnMore />
           </div>
         </div>
@@ -108,36 +118,31 @@ export const Home = () => {
           <div className='section1-bg'></div>
         </div>
         <div className='section2'>
-          <img src={waveRed} alt='red wave' className='red-wave'></img>
+          <img src={waveYellow} alt='yellow wave' className='yellow-wave'></img>
           <div className='section2-info'>
-            <h2><span>Design </span>is strategic.</h2>
-            <p>"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm belivies that success lies in creative collaboration with our clients."</p>
+            <h2><span>Website </span></h2>
+            <p>é seu lugar no mundo virtual, internet, que está disponível 24hs todos os dias do ano. Você que precisa divulgar seu negócio, serviço, ideia, ou qualquer coisa o website é seu melhor parceiro.</p>
             <ContactTertiary />
           </div>
         </div>
         <div className='section3'>
           <div className='section3-info'>
-            <h2>Our approach for creating a winning brand</h2>
+            <h2>Serviços para criação das suas ideias</h2>
           </div>
         </div>
         <div className='section4' id='services'>
           <div className='section4-info'>
             <div className='info'>
               <span>01</span>
-              <h3>Brand Strategy</h3>
-              <p>Brand Strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+              <h3>Website</h3>
+              <p>pode ter uma ou mais páginas. Sua navegação é feita por menu com links que direcionam para as outras páginas.</p>
             </div>
             <div className='info'>
               <span>02</span>
-              <h3>Brand Design</h3>
-              <p>Keep the brand design unique and meaningful helps in communicating the brand's timeless value effectively.</p>
+              <h3>Landing page</h3>
+              <p>é composta por uma página contendo seções com os assuntos desejados.</p>
             </div>
-            <div className='info'>
-              <span>03</span>
-              <h3>Web Design</h3>
-              <p>A beutiful crafted website is the best tool for brand awareness, and ultimately results in increased revenues.</p>
             </div>
-          </div>
         </div>
         <div className='section5' id='project'>
           <img src={waveWhite} alt='white wave' className='white-wave'></img>
@@ -163,9 +168,9 @@ export const Home = () => {
       </div>
     {/* ---------------------------------------------------footer */}
       <footer className='footer'>
-        <img src={waveRed} alt='red wave' className='red-wave'></img>
+        <img src={waveYellow} alt='yellow wave' className='yellow-wave'></img>
         <div className='footer-content'>
-          <h2>Let's build something great together.</h2>
+          <h2>Vamos construir seu lugar na internet juntos.</h2>
           <ContactSecondary />
         </div>
       </footer>

@@ -62,6 +62,10 @@ p {
   line-height: 1.5rem;
 }
 
+span {
+  color: var(--primary500);
+}
+
 @media (min-width: 769px) {
   .sections {
     display: grid;
@@ -117,7 +121,7 @@ p {
   justify-content: center;
 }
 
-.section2 .red-wave {
+.section2 .yellow-wave {
   position: absolute;
   left: -70px;
   top: 200px;
@@ -128,14 +132,6 @@ p {
   width: 400px;
   padding: max(10px, 5px);
 }
-
-.section2-info span {
-  color: var(--primary500);
-}
-
-/* .section2-info h2 {
-  color: var(--primary10);
-} */
 
 .section2-info p {
   color: var(--primary10);
@@ -176,14 +172,14 @@ p {
 }
 
 .section4-info h3 {
-  color: var(--primary10);
+  color: var(--secondary500);
   font-size: 1.2rem;
   margin-bottom: 1rem;
   position: relative;
 }
 
 .section4-info p {
-  color: var(--primary10);
+  color: var(--secondary500);
 }
 
 .section5 {
@@ -286,7 +282,7 @@ p {
   justify-content: space-between;
 }
 
-.footer .red-wave {
+.footer .yellow-wave {
   position: absolute;
   left: -66px;
   top: 50%;
@@ -335,7 +331,7 @@ p {
     font-size: 0.9rem;
   }
 
-  .section2 .red-wave {
+  .section2 .yellow-wave {
     top: 126px;
   }
 
@@ -381,7 +377,7 @@ p {
       no-repeat center;
   }
 
-  .section2 .red-wave {
+  .section2 .yellow-wave {
     width: 82px;
     left: 16px;
     top: -20px;
@@ -409,7 +405,10 @@ p {
     width: 90%;
     margin: 0;
     padding-block: 0;
-    color: var(--primary10);
+  }
+
+  .section3-info h2 {
+    color: var(--secondary500);
   }
 
   .section4-info span {
@@ -439,7 +438,7 @@ p {
     justify-content: space-evenly;
   }
 
-  .footer .red-wave {
+  .footer .yellow-wave {
     display: none;
   }
 

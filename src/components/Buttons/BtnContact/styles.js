@@ -30,14 +30,25 @@ export const Button = styled.button`
 
 export const ButtonSecondary = styled(Button)`
   background-color: var(--primary500);
+  color: var(--secondary500);
 `
 
 export const ButtonSubmit = styled(Button)`
   width: 50%;
-  padding: 1.3rem 4rem;
   background-color: var(--primary500);
+  color: var(--secondary500);
 
   @media (max-width: 768px) {
     width: 85%;
+  }
+`
+
+export const ButtonMore = styled(Button)`
+  background-color: var(--primary500);
+  color: var(--secondary500);
+  border: none;
+
+  :hover {
+    cursor: pointer;
   }
 `
