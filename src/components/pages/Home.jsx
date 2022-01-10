@@ -1,6 +1,6 @@
  import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { BtnLearnMore } from '../Buttons'
+import { LearnMore } from '../Buttons'
 import { Contact } from '../Buttons'
 import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
@@ -89,7 +89,7 @@ export const Home = () => {
           <p>
             We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.
           </p>
-          <BtnLearnMore />
+          <LearnMore />
         </div>
       </div>
       {/* ---------------------------------------------------sections */}

@@ -15,7 +15,7 @@ export const Submit = () => {
   )
 }
 
-export const BtnLearnMore = () => {
+export const LearnMore = () => {
   return (
     <C.ButtonMoreInfo>Saiba Mais</C.ButtonMoreInfo>
   )
