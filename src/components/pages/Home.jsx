@@ -1,7 +1,7 @@
  import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { LearnMore } from '../Buttons'
 import { Contact } from '../Buttons'
+import { LearnMore } from '../Buttons'
 import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
 import slide1 from '../../assets/desktop/image-slide-1.jpg'
@@ -15,24 +15,26 @@ import '../styles/home.css'
 import '../styles/header.css'
 
 export const Home = () => {
-  const slides = [slide1, slide2, slide3]
   const slidesInfo = [
     {
+      slide: slide1,
       info1: "Lear Product Roadmap",
       info2: "2019 Project"
     },
     {
+      slide: slide2,
       info1: "New Magestic Hotel",
       info2: "2018 Project"
     },
     {
+      slide: slide3,
       info1: "Crypto Dashboard",
       info2: "2016 Project"
     }
   ]
 
   let [displayMobileMenu, setDisplayMobileMenu] = useState("navbar navbar-close")
-  let [ carousel, setCarousel ] = useState(slides[0]) //photo
+  let [ carousel, setCarousel ] = useState(slidesInfo[0].slide) //photo
   let [ carouselItems, setCarouselItems] = useState(0) //index
   let [ carouselInfo1, setCarouselInfo1] = useState(slidesInfo[0].info1)
   let [ carouselInfo2, setCarouselInfo2] = useState(slidesInfo[0].info2)
@@ -46,9 +48,9 @@ export const Home = () => {
   }
 
   function handleCarouselNext () {
-    if(carouselItems < slides.length - 1) {
+    if(carouselItems < slidesInfo.length - 1) {
       setCarouselItems(carouselItems = carouselItems + 1)
-      setCarousel(slides[carouselItems])
+      setCarousel(slidesInfo[carouselItems].slide)
       setCarouselInfo1(slidesInfo[carouselItems].info1)
       setCarouselInfo2(slidesInfo[carouselItems].info2)
     }
@@ -57,7 +59,7 @@ export const Home = () => {
   function handleCarouselPrevious () {
     if(carouselItems > 0) {
       setCarouselItems(carouselItems = carouselItems - 1)
-      setCarousel(slides[carouselItems])
+      setCarousel(slidesInfo[carouselItems].slide)
       setCarouselInfo1(slidesInfo[carouselItems].info1)
       setCarouselInfo2(slidesInfo[carouselItems].info2)
     }
