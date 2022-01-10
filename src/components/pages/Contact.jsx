@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { SubmitPrimary } from  '../Buttons/BtnContact'
+import { Submit } from  '../Buttons'
 
 import '../styles/contact.css'
 
@@ -18,7 +18,7 @@ export const Contact = () => {
           <input type='email' name='email' ></input>
           <label>Mensagem</label>
           <textarea name="message"></textarea>
-          <SubmitPrimary />
+          <Submit />
         </form>
       </div>
     </div>

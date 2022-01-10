@@ -1,9 +1,7 @@
  import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { BtnLearnMore } from '../Buttons/BtnLearnMore'
-import { ContactPrimary } from '../Buttons/BtnContact'
-import { ContactSecondary } from  '../Buttons/BtnContact'
-import { ContactTertiary } from  '../Buttons/BtnContact'
+import { BtnLearnMore } from '../Buttons'
+import { Contact } from '../Buttons'
 import logo from '../../assets/logo.svg'
 import Hamburger from '../../assets/mobile/icon-hamburger.svg'
 import slide1 from '../../assets/desktop/image-slide-1.jpg'
@@ -81,7 +79,7 @@ export const Home = () => {
             <li><a href='#services'>Serviços</a></li>
             <li><a href='#project'>Projetos</a></li>
           </ul>
-          <ContactPrimary activeBtn={handleClick}/>
+          <Contact test="primary" activeBtn={handleClick}/>
         </nav>
       </header>
       {/* ---------------------------------------------------hero */}
@@ -104,7 +102,7 @@ export const Home = () => {
           <div className='section2-info'>
             <h2><span>Design </span>is strategic.</h2>
             <p>"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm belivies that success lies in creative collaboration with our clients."</p>
-            <ContactTertiary />
+            <Contact test="tertiary" />
           </div>
         </div>
         <div className='section3'>
@@ -156,7 +154,7 @@ export const Home = () => {
         <img src={waveRed} alt='red wave' className='red-wave'></img>
         <div className='footer-content'>
           <h2>Let's build something great together.</h2>
-          <ContactSecondary />
+          <Contact />
         </div>
       </footer>
       <Outlet />
