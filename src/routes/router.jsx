@@ -1,7 +1,8 @@
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from './components/pages/Home'
-import { Contact } from './components/pages/Contact'
-import { Sent } from "./components/pages/Sent";
+import { Home } from '../pages/Home'
+import { Contact } from '../pages/Contact'
+import { Sent } from "../pages/Sent";
 
 export const Router = () => {
   return (

@@ -24,7 +24,9 @@ export const Button = styled.button`
   :hover {
     cursor: pointer;
   }
+`
 
+export const ButtonContactNav = styled(Button)`
   @media (max-width: 768px) {
     background-color: ${props =>
       props.mobile ? 'var(--primary500)' : 'var(--secondary900)'};

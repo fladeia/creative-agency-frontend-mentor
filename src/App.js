@@ -1,4 +1,5 @@
-import { Router } from './router'
+import React from 'react'
+import { Router } from './routes/router'
 
 export const App = () => {
   return <Router />

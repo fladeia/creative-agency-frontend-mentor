@@ -1,5 +1,6 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { Submit } from  '../Buttons'
+import { Submit } from  '../components/Buttons'
 
 import '../styles/contact.css'
 

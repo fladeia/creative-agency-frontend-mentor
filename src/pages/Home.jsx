@@ -1,16 +1,16 @@
- import { useState } from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { Contact } from '../Buttons'
-import { LearnMore } from '../Buttons'
-import logo from '../../assets/logo.svg'
-import Hamburger from '../../assets/mobile/icon-hamburger.svg'
-import slide1 from '../../assets/desktop/image-slide-1.jpg'
-import slide2 from '../../assets/desktop/image-slide-2.jpg'
-import slide3 from '../../assets/desktop/image-slide-3.jpg'
-import waveWhite from '../../assets/desktop/bg-pattern-wavy-white.svg'
-import waveRed from '../../assets/desktop/bg-pattern-wave-red.svg'
-import previousArrow from  '../../assets/desktop/icon-arrow-previous.svg'
-import forwardArrow from  '../../assets/desktop/icon-arrow-next.svg'
+import { Contact, ContactNav } from '../components/Buttons'
+import { LearnMore } from '../components/Buttons'
+import logo from '../assets/logo.svg'
+import Hamburger from '../assets/mobile/icon-hamburger.svg'
+import slide1 from '../assets/desktop/image-slide-1.jpg'
+import slide2 from '../assets/desktop/image-slide-2.jpg'
+import slide3 from '../assets/desktop/image-slide-3.jpg'
+import waveWhite from '../assets/desktop/bg-pattern-wavy-white.svg'
+import waveRed from '../assets/desktop/bg-pattern-wave-red.svg'
+import previousArrow from  '../assets/desktop/icon-arrow-previous.svg'
+import forwardArrow from  '../assets/desktop/icon-arrow-next.svg'
 import '../styles/home.css'
 import '../styles/header.css'
 
@@ -81,7 +81,7 @@ export const Home = () => {
             <li><a href='#services'>Serviços</a></li>
             <li><a href='#project'>Projetos</a></li>
           </ul>
-          <Contact test="primary" activeBtn={handleClick}/>
+          <ContactNav test="primary" mobile={true} activeBtn={handleClick}/>
         </nav>
       </header>
       {/* ---------------------------------------------------hero */}
@@ -136,8 +136,8 @@ export const Home = () => {
           <div className='section5-info'>
             <h2>Brand naming & guidelines</h2>
             <div className='section5-arrows'>
-              <img src={previousArrow} al="previews arrow" onClick={handleCarouselPrevious}></img>
-              <img src={forwardArrow} al="forward arrow" onClick={handleCarouselNext}></img>
+              <img src={previousArrow} alt="previews arrow" onClick={handleCarouselPrevious}></img>
+              <img src={forwardArrow} alt="forward arrow" onClick={handleCarouselNext}></img>
             </div>
           </div>
         </div>
