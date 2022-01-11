@@ -1,4 +1,4 @@
- import { useState } from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { BtnLearnMore } from '../Buttons/BtnContact'
 import { ContactPrimary } from '../Buttons/BtnContact'
@@ -156,7 +156,7 @@ export const Home = () => {
         </div>
         <div className='section6'>
           <div className='slides-info'>
-            <a href={carouselUrl} target='_blank'>
+            <a href={carouselUrl} target='_blank' rel="noopener noreferrer">
               <img src={carousel} alt='slides' className='slides-illustration'></img>
             </a>
             <div className='slides-text'>
