@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
+import { ContactModal } from '../components/Contact'
 import { Contact, ContactNav } from '../components/Buttons'
 import { LearnMore } from '../components/Buttons'
 import logo from '../assets/logo.svg'
@@ -34,16 +35,25 @@ export const Home = () => {
   ]
 
   let [displayMobileMenu, setDisplayMobileMenu] = useState("navbar navbar-close")
+  let [displayContact, setDisplayContact] = useState("modal-close")
   let [ carousel, setCarousel ] = useState(slidesInfo[0].slide) //photo
   let [ carouselItems, setCarouselItems] = useState(0) //index
   let [ carouselInfo1, setCarouselInfo1] = useState(slidesInfo[0].info1)
   let [ carouselInfo2, setCarouselInfo2] = useState(slidesInfo[0].info2)
   
-  function handleClick () {
+  function handleClickMenu () {
     if(displayMobileMenu === "navbar navbar-close") {
       setDisplayMobileMenu("navbar")
     } else {
       setDisplayMobileMenu("navbar navbar-close")
+    }
+  }
+
+  function handleClickContact () {
+    if(displayContact === "modal-close") {
+      setDisplayContact("contact-content")
+    } else {
+      setDisplayContact("modal-close")
     }
   }
 
@@ -73,7 +83,7 @@ export const Home = () => {
           <img src={logo} alt="Logo" ></img>
         </div>
         <div className='hamburger-menu'>
-          <img src={Hamburger} alt="Hamburger menu"  onClick={handleClick} ></img>
+          <img src={Hamburger} alt="Hamburger menu"  onClick={handleClickMenu} ></img>
         </div>
         <nav className={displayMobileMenu}>
           <ul>
@@ -81,7 +91,7 @@ export const Home = () => {
             <li><a href='#services'>Serviços</a></li>
             <li><a href='#project'>Projetos</a></li>
           </ul>
-          <ContactNav test="primary" mobile={true} activeBtn={handleClick}/>
+          <ContactNav test="primary" mobile={true}/>
         </nav>
       </header>
       {/* ---------------------------------------------------hero */}
@@ -104,7 +114,7 @@ export const Home = () => {
           <div className='section2-info'>
             <h2><span>Design </span>is strategic.</h2>
             <p>"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm belivies that success lies in creative collaboration with our clients."</p>
-            <Contact test="tertiary" />
+            <Contact test="tertiary" activeBtn={handleClickContact} />
           </div>
         </div>
         <div className='section3'>
@@ -159,6 +169,7 @@ export const Home = () => {
           <Contact />
         </div>
       </footer>
+      <ContactModal testes={displayContact} activeBtn={handleClickContact}/>
       <Outlet />
     </div>
   )

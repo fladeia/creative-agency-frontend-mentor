@@ -1,20 +1,15 @@
 import React from 'react'
 import * as C from './styles'
-import { Link } from 'react-router-dom'
 
-export const Contact = ({activeBtn, test, mobile}) => {
+export const Contact = ({activeBtn, test}) => {
   return (
-      <Link to="contact" >
-        <C.Button test={test} onClick={activeBtn}><span>Contato</span></C.Button>
-      </Link>
+    <C.Button test={test} onClick={activeBtn}><span>Contato</span></C.Button>
   )
 }
 
 export const ContactNav = ({activeBtn, test, mobile}) => {
   return (
-      <Link to="contact" >
-        <C.ButtonContactNav test={test} mobile={mobile} onClick={activeBtn}><span>Contato</span></C.ButtonContactNav>
-      </Link>
+    <C.ButtonContactNav test={test} mobile={mobile} onClick={activeBtn}><span>Contato</span></C.ButtonContactNav>
   )
 }
 
