@@ -52,6 +52,7 @@ export const Home = () => {
   function handleClickContact () {
     if(displayContact === "modal-close") {
       setDisplayContact("contact-content")
+      handleClickMenu ()
     } else {
       setDisplayContact("modal-close")
     }
@@ -91,7 +92,7 @@ export const Home = () => {
             <li><a href='#services'>Serviços</a></li>
             <li><a href='#project'>Projetos</a></li>
           </ul>
-          <ContactNav test="primary" mobile={true}/>
+          <ContactNav test="primary" mobile={true} activeBtn={handleClickContact}/>
         </nav>
       </header>
       {/* ---------------------------------------------------hero */}
@@ -101,7 +102,7 @@ export const Home = () => {
           <p>
             We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.
           </p>
-          <LearnMore />
+          <a href='#about'><LearnMore /></a>
         </div>
       </div>
       {/* ---------------------------------------------------sections */}
@@ -166,7 +167,7 @@ export const Home = () => {
         <img src={waveRed} alt='red wave' className='red-wave'></img>
         <div className='footer-content'>
           <h2>Let's build something great together.</h2>
-          <Contact />
+          <Contact activeBtn={handleClickContact} />
         </div>
       </footer>
       <ContactModal testes={displayContact} activeBtn={handleClickContact}/>

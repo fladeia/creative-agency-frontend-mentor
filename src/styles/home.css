@@ -201,12 +201,22 @@ p {
 }
 
 .section5-arrows {
+  width: 8rem;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.section5-arrows:hover {
-  cursor: pointer;
+.section5-arrows img {
+  width: 3rem;
+  height: 3rem;
+  transition: width, height 0.1s;
+}
+
+.section5-arrows img:hover {
+  width: 2.9rem;
+  height: 2.9rem;
 }
 
 .section6 {
