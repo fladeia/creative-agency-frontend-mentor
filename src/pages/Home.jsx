@@ -36,8 +36,8 @@ export const Home = () => {
 
   let [displayMobileMenu, setDisplayMobileMenu] = useState("navbar navbar-close")
   let [displayContact, setDisplayContact] = useState("modal-close")
-  let [ carousel, setCarousel ] = useState(slidesInfo[0].slide) //photo
-  let [ carouselItems, setCarouselItems] = useState(0) //index
+  let [ carousel, setCarousel ] = useState(slidesInfo[0].slide)
+  let [ carouselItems, setCarouselItems] = useState(0)
   let [ carouselInfo1, setCarouselInfo1] = useState(slidesInfo[0].info1)
   let [ carouselInfo2, setCarouselInfo2] = useState(slidesInfo[0].info2)
   
