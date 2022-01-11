@@ -9,14 +9,14 @@ export const ContactModal = ({testes, activeBtn}) => {
         <div className="form-content">
           <span className='contact-close' onClick={activeBtn}>X</span>
           <form
-            action="https://formsubmit.co/ladeiadev@gmail.com"
+            action="https://formsubmit.co/contato@ladeia.dev.br"
             method="POST"
             className="form"
           >
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:3000/sent"
+              value="http://ladeia.dev.br/sent"
             ></input>
             <label>Nome</label>
             <input type="text" name="name"></input>
