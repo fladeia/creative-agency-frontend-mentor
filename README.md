@@ -11,7 +11,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/fladeia/creative-agency-frontend-mentor)
-- [Live Site URL](elegant-benz-456130.netlify.app)
+- [Live Site URL](https://elegant-benz-456130.netlify.app)
 
 ### Built with
 
